@@ -53,7 +53,7 @@ $(document).ready(function($) {
 		})
 		.done(function(data) {
 			if(data == 'success'){
-				window.location = 'mainpage.php';
+				window.location = 'request.php';
 				console.log("success");
 			} else {
 				$('#loginMsg').html(data);
@@ -123,6 +123,18 @@ $(document).ready(function($) {
 			console.log("complete");
 		});
 		
+	});
+
+
+	// REQUEST FORM
+
+	$('#requestForm').submit(function(event) {
+		/* Act on the event */
+		event.preventDefault();
+
+		var dataToPost = $(this).serializeArray();
+
+		console.log(dataToPost);
 	});
 
 });

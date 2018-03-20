@@ -5,67 +5,27 @@ session_start();
 if (!isset($_SESSION['username']) || $_GET['logout'] == 1) {
 	session_destroy();
 } else {
-	header('Location: mainpage.php');
+	header('Location: request.php');
 }
+
+$page = 'home';
 
 ?>
 
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<!-- Required meta tags -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title>Notes App</title>
+<?php include 'inc/header.php'; ?>
 
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-		<link rel="stylesheet" href="css/main.css">
-	</head>
-	<body>
 
-				        
-		<nav class="navbar navbar-expand-md navbar-dark bg-primary mb-4">
-			<a class="navbar-brand" href="./">Writer's App</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarCollapse">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="./">Home <span class="sr-only">(current)</span></a>
-					</li>
-					<!-- <li class="nav-item">
-						<a class="nav-link" href="#">Link</a>
-					</li> -->
-					
-				</ul>
-
-				<ul class="navbar-nav navbar-right">
-					<li class="nav-item">
-						<a class="nav-link" href="#" data-target="#loginForm" data-toggle="modal" data-dismiss="modal">Log In</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Contact</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Help</a>
-					</li>
-				</ul>
-					
-			</div>
-		</nav>
 
 		<section class="hero">
 			<div class="container">
 				<div class="intro">
-					<h1>Online Writer's App</h1>
+					<h1>Company Name :: Cloud Hosting</h1>
 
-					<p>Your notes with you everywhere you go!</p>
+					<p>With the cloud, individuals and small businesses can snap their fingers and instantly set up enterprise-class services</p>
 
-					<p>Easy to you! Security for all your important notes</p>
-					<a href="" class="btn btn-custom" data-target="#signUpForm" data-toggle="modal">Get Started &raquo;</a>
+					<p><small><q>If someone asks me what cloud computing is, I try not to get bogged down with definitions. I tell them that, simply put, cloud computing is a better way to run your business.</q> &mdash; <cite>Marc Benioff, Founder, CEO and Chairman of Salesforce</cite></small></p>
+					<a href="" class="btn btn-custom btn-lg" data-target="#signUpForm" data-toggle="modal">Get Started &raquo;</a>
 				</div>
 			</div>
 		</section>
@@ -200,17 +160,4 @@ if (!isset($_SESSION['username']) || $_GET['logout'] == 1) {
 					</div><!-- /.modal-dialog -->
 				</div><!-- /.modal -->
 
-		<footer>
-			<div class="container">
-				<p><a href="https://iamyinka.com">Yinka Ashafa</a> &copy; 2018 &mdash; All Rights Reserved</p>
-			</div>
-		</footer>
-
-		<!-- Optional JavaScript -->
-		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-		<script type="text/javascript" src="js/app.js"></script>
-	</body>
-</html>
+		<?php include 'inc/footer.php'; ?>
